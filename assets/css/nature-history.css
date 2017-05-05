@@ -254,6 +254,7 @@ ul.breadcrumb li+li:before {
 }
 ul.breadcrumb li a {
   text-decoration: none;
+	color: #333333;
 }
 ul.breadcrumb li a:visited {
 	color: #333333;
@@ -299,15 +300,55 @@ ul.breadcrumb li a:hover {
 
 #nature-history-page h3 {
 	font-family: 'Kalyna';
-	color:  #333333;
+	color:  #101010;
 	font-size: 26px;
 	font-weight: 400;
-	line-height: 26px;
+	line-height: 42px;
 	text-decoration: underline;
 	text-align: center;
 }
 
-.nature-history-pictures {
+#nature-history-page h3 a {
+	color: #101010;
+}
+
+#nature-history-page h3 a:hover {
+	color: #88b04b;
+}
+
+.nature-history-pages {
+	display: flex;
+	flex-direction: row;
+	margin: 78px 0 158px 0;
+}
+
+.nature-page, .history-page {
+	display: flex;
+	flex-direction: column;
+}
+
+.nature-img, .history-img {
+  min-height: 205px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+
+.nature-history-watermark {
+	height: 205px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	margin: 0 145px 0 195px;
+}
+
+.curly {
+	margin-bottom: 26px;
+}
+
+/*.nature-history-pictures {
 	display: flex;
 	flex-direction: row;
 	align-items: flex-end;
@@ -328,7 +369,7 @@ ul.breadcrumb li a:hover {
 
 .empty {
 
-}
+}*/
 /*ПРИРОДА ТА ІСТОРІЯ END*/
 
 

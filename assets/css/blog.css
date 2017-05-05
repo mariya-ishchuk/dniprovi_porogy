@@ -254,6 +254,7 @@ ul.breadcrumb li+li:before {
 }
 ul.breadcrumb li a {
   text-decoration: none;
+	color: #333333;
 }
 ul.breadcrumb li a:visited {
 	color: #333333;
