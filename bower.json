@@ -1,0 +1,31 @@
+{
+  "name": "dniprovi_porogy",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "maria-ishchuk <mariya.ishchuk@me.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mariya-ishchuk/dniprovi_porogy",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jcarousel": "^0.3.5",
+    "jquery": "^3.2.1",
+    "masonry": "^4.2.0"
+  },
+  "overrides": {
+    "outlayer": {
+      "main": [
+        "item.js",
+        "outlayer.js"
+      ]
+    }
+  }
+}
