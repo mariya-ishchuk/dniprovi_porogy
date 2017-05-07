@@ -669,10 +669,12 @@ hr {
 	width: 100%;
 	height: -1px;
 	margin: 50px 0 0 0;
+	box-sizing: border-box;
 }
 
 #nature-history .grid-container {
   width: 82.8%;
+  max-width: 1140px;
 }
 
 #nature-history .grid {
@@ -748,9 +750,6 @@ hr {
 
 #nature-history .grid-item--height2 { height: 496px; }
 
-.text-hover {
-
-}
 /*ПРИРОДА ТА ІСТОРІЯ END*/
 
 
@@ -871,11 +870,11 @@ hr {
   flex-direction: column;
 }
 
-.sponsor-text {
+.sponsor-text, .sponsor {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 }
 
 .support-dp-h3 {
