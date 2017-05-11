@@ -13,7 +13,12 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
+    os = require('os'),
     inject = require('gulp-inject');
+
+var browser = os.platform() === 'linux' ? 'google-chrome' : (
+  os.platform() === 'darwin' ? 'google chrome' : (
+  os.platform() === 'win32' ? 'chrome' : 'firefox'));
 
 gulp.task('bowerfiles', function(cb) {
   pump([
@@ -66,12 +71,12 @@ gulp.task('inject', function() {
      return file.contents.toString();
     }
   }))
-  // .pipe(inject(gulp.src(['./dist/html/footer.html']), {
-  //   starttag: '<!-- inject:footer:html -->',
-  //   transform: function(filepath, file) {
-  //    return file.contents.toString();
-  //   }
-  // }))
+  .pipe(inject(gulp.src(['./dist/html/footer.html']), {
+    starttag: '<!-- inject:footer:html -->',
+    transform: function(filepath, file) {
+     return file.contents.toString();
+    }
+  }))
   .pipe(gulp.dest('dist'));
 });
 gulp.task('shared-html', function() {
@@ -120,10 +125,10 @@ gulp.task('fonts', function() {
 // Fonts
 gulp.task('images', function() {
   return gulp.src('./app/assets/images/*')
-    .pipe(imagemin({
-      progressive: true,
-      use: [pngquant()]
-    }))
+    // .pipe(imagemin({
+    //   progressive: true,
+    //   use: [pngquant()]
+    // }))
     .pipe(gulp.dest('dist/images'));
 });
 
@@ -149,7 +154,7 @@ gulp.task('connect', function() {
 gulp.task('app', function() {
   var options = {
     uri: 'http://localhost:8080',
-    app: 'chrome'
+    app: browser
   };
   return gulp.src('./dist/index.html')
     .pipe(open(options));
