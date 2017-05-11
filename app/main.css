@@ -35,7 +35,7 @@ header {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-image: url(../img/background-river.jpg);
+  background-image: url(../images/background-river.jpg);
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -160,6 +160,96 @@ header a:hover {
 	color: #fafffd;
 	text-align: right;
 	display: flex;
+}
+
+.carousel-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+}
+
+.carousel-container-articles {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+}
+
+/*
+This is the visible area of you carousel.
+Set a width here to define how much items are visible.
+The width can be either fixed in px or flexible in %.
+Position must be relative!
+*/
+.jcarousel, .jcarousel-articles {
+    overflow: hidden;
+    position: relative;
+    width: 600px;
+}
+
+.jcarousel-articles {
+    width: 1150px;
+}
+
+/*
+This is the container of the carousel items.
+You must ensure that the position is relative or absolute and
+that the width is big enough to contain all items.
+*/
+.jcarousel ul, .jcarousel-articles ul {
+    /* Optional, required in this case since it's a  element */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 20000em;
+}
+
+/*
+These are the item elements. jCarousel works best, if the items
+have a fixed width and height (but it's not required).
+*/
+.jcarousel li, .jcarousel-articles li {
+    float: left;
+    /* Required only for block elements like 's */
+    width: 600px;
+}
+
+.jcarousel-articles li {
+    width: 393px;
+}
+
+.carousel-text {
+    height: auto;
+    width: 100%;
+}
+
+.prev-carousel-button, .next-carousel-button {
+    cursor: pointer;
+    left: -25px;
+    position: absolute;
+}
+
+.next-carousel-button {
+    right: -25px;
+    left: auto;
 }
 
 #carousel {
@@ -386,7 +476,7 @@ header a:hover {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-image: url(../img/news-background.png);
+  background-image: url(../images/news-background.png);
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -576,7 +666,7 @@ header a:hover {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-image: url(../img/contact-mail-background.png);
+  background-image: url(../images/contact-mail-background.png);
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
