@@ -89,11 +89,18 @@ gulp.task('shared-html', function() {
 
 gulp.task('minify-html', function() {
   return gulp.src([
-      './dist/*.html',
-      './dist/html/*.html'
+      './dist/*.html'
     ])
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('dist'));
+});
+
+gulp.task('minify-shared-html', function() {
+  return gulp.src([
+      './dist/html/*.html'
+    ])
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('dist/html'));
 });
 
 gulp.task('css', function() {
@@ -178,7 +185,7 @@ gulp.task('onWatchChange', function(cb) {
 
 gulp.task('dist', gulpSequence('bowerfiles', 'js', ['html', 'shared-html', 'css', 'fonts', 'images'], 'inject'));
 
-gulp.task('minify', ['minify-js', 'minify-html', 'minify-css']);
+gulp.task('minify', ['minify-js', 'minify-html', 'minify-shared-html', 'minify-css']);
 
 gulp.task('default', gulpSequence('clean', 'dist', 'connect', 'watch', 'app'));
 
