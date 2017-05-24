@@ -160,7 +160,7 @@ gulp.task('connect', function() {
 
 gulp.task('app', function() {
   var options = {
-    uri: 'http://localhost:8080',
+    uri: 'http://localhost:8080/index.html',
     app: browser
   };
   return gulp.src('./dist/index.html')

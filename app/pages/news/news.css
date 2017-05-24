@@ -398,7 +398,7 @@ ul.breadcrumb li a:hover {
 	cursor: pointer;
 }
 
-.btn-text {
+.nav-btn-text {
 	font-family: 'Roboto';
 	color:  #666666;
 	font-size: 17px;
@@ -416,7 +416,7 @@ ul.breadcrumb li a:hover {
 	box-shadow: none;
 }
 
-.buttons-nav button:hover .btn-text{
+.buttons-nav button:hover .nav-btn-text{
 	color:  #ffffff;
 }
 
