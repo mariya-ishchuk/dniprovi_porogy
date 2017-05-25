@@ -1,21 +1,23 @@
+@green: #88b04b;
+
 @font-face {
-  font-family: 'Kalyna';
-  src: url('../fonts/kalyna/kalyna.otf');
+	font-family: 'Kalyna';
+	src: url('../fonts/kalyna/kalyna.otf');
 }
 
 @font-face {
-  font-family: 'robotoblack';
-  src: url('../fonts/Roboto/Roboto-Black-webfont.woff') format('woff');
-  font-family: 'robotobold';
-  src: url('../fonts/Roboto/Roboto-Bold-webfont.woff') format('woff');
-  font-family: 'robotolight';
-  src: url('../fonts/Roboto/Roboto-Light-webfont.woff') format('woff');
-  font-family: 'robotolight_italic';
-  src: url('../fonts/Roboto/Roboto-LightItalic-webfont.woff') format('woff');
+	font-family: 'robotoblack';
+	src: url('../fonts/Roboto/Roboto-Black-webfont.woff') format('woff');
+	font-family: 'robotobold';
+	src: url('../fonts/Roboto/Roboto-Bold-webfont.woff') format('woff');
+	font-family: 'robotolight';
+	src: url('../fonts/Roboto/Roboto-Light-webfont.woff') format('woff');
+	font-family: 'robotolight_italic';
+	src: url('../fonts/Roboto/Roboto-LightItalic-webfont.woff') format('woff');
 	font-family: 'robotomedium';
 	src: url('../fonts/Roboto/Roboto-Medium-webfont.woff') format('woff');
 	font-family: 'robotoregular';
-  src: url('../fonts/Roboto/Roboto-Regular-webfont.woff') format('woff');
+	src: url('../fonts/Roboto/Roboto-Regular-webfont.woff') format('woff');
 }
 
 html {
@@ -31,12 +33,12 @@ body {
 
 /*HEADER*/
 header {
-  height: 143px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
+	height: 143px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
 }
 
 #header-top {
@@ -47,17 +49,18 @@ header {
 	flex-direction: row;
 	justify-content: center;
 	align-items: flex-start;
+
+	.header-ul {
+		align-items: center;
+		display: flex;
+		flex-direction: row;
+		position: relative;
+		width: 1155px;
+		justify-content: center;
+		margin-left: 8%;
+	}
 }
 
-#header-top .header-ul {
-	align-items: center;
-	display: flex;
-	flex-direction: row;
-	position: relative;
-	width: 1155px;
-	justify-content: center;
-	margin-left: 8%;
-}
 
 #header-bottom .header-ul {
 	align-items: center;
@@ -79,7 +82,7 @@ header a {
 }
 
 header a:hover {
-	color: #88b04b;
+	color: @green;
 }
 
 .border {
@@ -126,7 +129,7 @@ header a:hover {
 
 .green-btn {
 	border-radius: 5px;
-	background-color:  #88b04b;
+	background-color:  @green;
 	box-shadow: 1px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24);
 	width: auto;
 	height: 40px;
@@ -160,61 +163,54 @@ header a:hover {
 
 /*SEARCH-BOX*/
 .box {
-  width: 200px;
-  height: 39px;
+	width: 200px;
+	height: 39px;
 }
 
 .container-2 {
-  width: 100%;
-  vertical-align: middle;
-  white-space: nowrap;
-  position: relative;
-}
-
-.container-2 input#search {
-  width: 45px;
-  height: 39px;
-  background-color:  rgba(52, 46, 55, 0.4);
-  border: none;
-  float: left;
-  padding-left: 35px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  font-family: 'Roboto';
-	color: #fafffd;
-	font-size: 16px;
-	font-weight: 300;
-	line-height: 42px;
-	text-align: left;
- 
-  -webkit-transition: width .55s ease;
-  -moz-transition: width .55s ease;
-  -ms-transition: width .55s ease;
-  -o-transition: width .55s ease;
-  transition: width .55s ease;
-}
-
-.container-2 input#search::-webkit-input-placeholder {
-	color: #fafffd;
-}
-
-.container-2 .icon {
-  position: absolute;
-  margin-left: 14px;
-  margin-top: 12px;
-  z-index: 1;
-	color: #fafffd;
-}
-
-.container-2 input#search:focus, .container-2 input#search:active {
-  outline: none;
-  width: 100%;
-	padding-right: 12px;
-}
- 
-.container-2:hover input#search {
 	width: 100%;
+	vertical-align: middle;
+	white-space: nowrap;
+	position: relative;
+
+	&:hover input#search {
+		width: 100%;
+	}
+
+	input#search {
+		width: 45px;
+		height: 39px;
+		background-color:  rgba(52, 46, 55, 0.4);
+		border: none;
+		float: left;
+		padding-left: 35px;
+		border-radius: 5px;
+		font-family: 'Roboto';
+		color: #fafffd;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 42px;
+		text-align: left;
+		transition: width .55s ease;
+
+		&::-webkit-input-placeholder {
+			color: #fafffd;
+		}
+
+		&:focus, &:active {
+			outline: none;
+			width: 100%;
+			padding-right: 12px;
+		}
+	}
+
+	.icon {
+		position: absolute;
+		margin-left: 14px;
+		margin-top: 12px;
+		z-index: 1;
+		color: #fafffd;
+	}
 }
 /*SEARCH-BOX END*/
 /*HEADER END*/
@@ -222,12 +218,12 @@ header a:hover {
 
 /*БЛОГ*/
 #blog {
-  height: 2195px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
+	height: 2195px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
 }
 /*BREADCRUMBS*/
 .blog-breadcrumbs {
@@ -243,25 +239,25 @@ header a:hover {
 	text-align: right;
 }
 ul.breadcrumb {
-  padding: 10px;
-  list-style: none;
+	padding: 10px;
+	list-style: none;
 }
 ul.breadcrumb li {display: inline;}
 
 ul.breadcrumb li+li:before {
-  padding: 8px;
-  content: "/\00a0";
+	padding: 8px;
+	content: "/\00a0";
 }
 ul.breadcrumb li a {
-  text-decoration: none;
+	text-decoration: none;
 	color: #333333;
 }
 ul.breadcrumb li a:visited {
 	color: #333333;
 }
 ul.breadcrumb li a:hover {
-  color: #88b04b;
-  text-decoration: underline;
+	color: @green;
+	text-decoration: underline;
 }
 /*BREADCRUMBS-END*/
 
@@ -274,9 +270,9 @@ ul.breadcrumb li a:hover {
 }
 
 .logo-with-text1{
-  position: relative;
-  width: 257px;
-  height: 130px;
+	position: relative;
+	width: 257px;
+	height: 130px;
 }
 
 .text-with-logo1 {
@@ -382,12 +378,12 @@ ul.breadcrumb li a:hover {
 	width: 170px;
 	border-radius: 5px;
 	border-width: 1px;
-	border-color:  #88b04b;
+	border-color:  @green;
 	border-style: solid;
 	background-color:  #ffffff;
 	box-shadow: 1px 3px 4.7px 0.3px rgba(91, 119, 49, 0.24);
 	font-family: 'Roboto';
-	color:  #88b04b;
+	color:  @green;
 	font-size: 16px;
 	font-weight: 700;
 	line-height: 26px;
@@ -399,7 +395,7 @@ ul.breadcrumb li a:hover {
 }
 
 .read-more-btn:hover {
-	background-color:  #88b04b;
+	background-color:  @green;
 	box-shadow: 1px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24);
 	color:  #ffffff;
 }
@@ -466,8 +462,18 @@ hr {
 	display: flex;
 }
 
+.buttons-nav button.active {
+	background-color:  @green;
+	color:  #ffffff;
+	box-shadow: none;
+}
+
+.buttons-nav button.active .nav-btn-text{
+	color:  #ffffff;
+}
+
 .buttons-nav button:hover {
-	background-color:  #88b04b;
+	background-color:  @green;
 	box-shadow: none;
 }
 
@@ -521,7 +527,7 @@ hr {
 }
 
 .author-view:hover h5 {
-	color:  #88b04b;
+	color:  @green;
 	text-decoration: underline;
 }
 
@@ -562,16 +568,16 @@ hr {
 
 /*МЕНЕ ЦІКАВЛЯТЬ ПОРОГИ*/
 #contact-mail {
-  height: 416px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-image: url(../images/contact-mail-background.png);
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  align-items: center;
-  position: relative;
+	height: 416px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-image: url(../images/contact-mail-background.png);
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	align-items: center;
+	position: relative;
 }
 
 .caption-logo-white2 {
@@ -583,9 +589,9 @@ hr {
 }
 
 .logo-with-text-white2{
-  position: relative;
-  width: 278px;
-  height: 66px;
+	position: relative;
+	width: 278px;
+	height: 66px;
 }
 
 .text-with-logo-white2 {
@@ -636,7 +642,7 @@ input::placeholder {
 }
 
 input:focus{
-  outline: none;
+	outline: none;
 }
 
 #subscribe-btn {
@@ -648,13 +654,13 @@ input:focus{
 
 /*FOOTER*/
 footer {
-  height: 338px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: #342e37;
-  align-items: center;
-  position: relative;
+	height: 338px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #342e37;
+	align-items: center;
+	position: relative;
 }
 
 #footer-top {
@@ -700,7 +706,7 @@ footer {
 }
 
 .footer-li:hover {
-	color: #88b04b;
+	color: @green;
 	text-decoration: underline;
 }
 
@@ -742,12 +748,12 @@ footer a {
 
 .coordinators {
 	width: 120px;
-  display: inline-block;
+	display: inline-block;
 }
 
 .tel {
 	width: 88px;
-  display: inline-block;
+	display: inline-block;
 }
 
 .right1 {

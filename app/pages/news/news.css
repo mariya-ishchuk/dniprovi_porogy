@@ -411,6 +411,16 @@ ul.breadcrumb li a:hover {
 	margin-top: 96px;
 }
 
+.buttons-nav button.active {
+	background-color:  #88b04b;
+	color:  #ffffff;
+	box-shadow: none;
+}
+
+.buttons-nav button.active .nav-btn-text{
+	color:  #ffffff;
+}
+
 .buttons-nav button:hover {
 	background-color:  #88b04b;
 	box-shadow: none;
