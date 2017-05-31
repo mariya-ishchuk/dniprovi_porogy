@@ -126,7 +126,7 @@ header a:hover {
 
 .green-btn {
 	border-radius: 5px;
-	background-color:  #88b04b;
+	background-color: #88b04b;
 	box-shadow: 1px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24);
 	width: auto;
 	height: 40px;
@@ -134,7 +134,7 @@ header a:hover {
 	padding: 0 40px 0 40px;
 	box-sizing: border-box;
 	font-family: 'Roboto';
-	color:  #ffffff;
+	color: #ffffff;
 	font-size: 16px;
 	font-weight: 900;
 	text-align: left;
@@ -220,9 +220,9 @@ header a:hover {
 /*HEADER END*/
 
 
-/*НОВИНИ*/
-.news {
-  height: 1493px;
+/*КРОМЛЕХ*/
+#kromleh {
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -230,10 +230,10 @@ header a:hover {
   position: relative;
 }
 /*BREADCRUMBS*/
-.news-breadcrumbs {
+.kromleh-breadcrumbs {
 	width: 1155px;
 	display: flex;
-	margin-top: 52px;
+	margin-top: 45px;
 	position: absolute;
 	font-family: 'Roboto';
 	color:  #333333;
@@ -264,80 +264,192 @@ ul.breadcrumb li a:hover {
 }
 /*BREADCRUMBS-END*/
 
-.caption-logo1 {
-	margin: 76px 0 66px 0;
+.article {
 	display: flex;
-	width: 100%;
-	height: 130px;
-	justify-content: center;
+	flex-direction: column;
+	width: 1140px;
 }
 
-.logo-with-text1{
-  position: relative;
-  width: 257px;
-  height: 130px;
+.kromleh-wrapper {
+	display: flex;
+	flex-direction: row;
 }
 
-.text-with-logo1 {
-	position: absolute;
+.social {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 128px 0 0;
+}
+
+.social p {
+	font-family: 'Roboto';
+	color:  #666666;
+	font-size: 13px;
+	font-weight: 300;
+	text-align: left;
+}
+
+.circle {
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	border: 1px solid #3b5998;
+	border-radius: 50%;
+	cursor: pointer;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-negative: 0;
+	    flex-shrink: 0;
+	height: 38px;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	position: relative;
+	width: 38px;
+}
+
+.facebook-share {
+	border: 1px solid #3b5998;
+	margin: 20px 0 20px 0;
+}
+
+.google-share {
+	border: 1px solid #d34836;
+}
+
+.social a {
+	text-decoration: none;
+}
+
+.fa-facebook {
+	-ms-flex-item-align: center;
+	    align-self: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	color: #3b5998;
+}
+
+.fa-google-plus {
+	-ms-flex-item-align: center;
+	    align-self: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	color: #d34836;
+}
+
+.caption {
 	font-family: 'Kalyna';
 	font-size: 42px;
 	font-weight: 400;
 	top: 130px;
+	line-height: 32px;
 	color:  #333333;
+	margin-bottom: 20px;
+	align-self: center;
+	margin: 133px 0 30px 0;
 }
 
-.news a {
-	text-decoration: none;
+.article-date {
+	font-family: 'Roboto';
+	color: #666666;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 26px;
+	margin-right: 30px;
 }
 
-#news-articles {
+.picture-text {
+	width: 750px;
 	display: flex;
-	flex-direction: row;
-	width: 1200px;
-	flex-wrap: wrap;
-	justify-content: center;
+	flex-direction: column;
 }
 
-.news-article {
-	border-bottom-right-radius: 3px;
-	border-top-right-radius: 3px;
-	background-color:  #ffffff;
-	width: 556px;
-	height: 143px;
-	display: flex;
-	margin: 0 15px 50px 15px;
+.article-img {
+	min-width: 100%;
+	margin: 0 0 25px 0;
 }
 
-.news-article a {
-	display: flex;
+.paragraf {
+	font-family: Roboto;
+	color:  #666666;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 26px;
+	text-align: left;
+	margin-bottom: 30px;
 }
 
-.news-article:hover {
-	box-shadow: 1px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24);
+.kromleh-more-info-p {
+	font-family: Roboto;
+	color:  #666666;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 26px;
+	text-align: left;
 }
 
-.news-article:hover .news-p {
-	color:  #88b04b;
+.kromleh-external-link {
 	text-decoration: underline;
 }
 
-.news-article:first-child, .news-article:nth-child(3), .news-article:nth-child(5), .news-article:nth-child(7), .news-article:nth-child(9) {
-	margin-left: 0;
+.kromleh-external-link a, .kromleh-external-link a:visited {
+	color:  #666666;
 }
 
-.news-article:last-child, .news-article:nth-child(2), .news-article:nth-child(4), .news-article:nth-child(6), .news-article:nth-child(8), .news-article:nth-child(10) {
-	margin-right: 0;
+.kromleh-external-link a:hover {
+	color: #88b04b;
 }
 
-.news-text {
-	display: flex;
-	flex-direction: column;
-	margin: 29px 0 0 30px;
+.kromleh-map {
+	margin: 60px 0 57px 0;
+}
+
+.map-container {
+  height: 468px;
+  width: 1140px;
+  position: relative;
+}
+
+#map-wrap {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#map {
+	position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.h4-caption {
+	font-family: 'Kalyna';
+	color:  #333333;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 32px;
+	text-align: left;
+}
+
+hr {
+	width: 1140px;
+	border-top: 1px solid #e3e3e3;
+	margin: 12px 0 38px 0;
+	box-sizing: border-box;
+}
+
+.from-blog {
+	margin-bottom: 105px;
 }
 
 .date {
-	font-family: 'Roboto';
+	font-family: Roboto;
 	color:  #666666;
 	font-size: 13px;
 	font-weight: 400;
@@ -345,91 +457,146 @@ ul.breadcrumb li a:hover {
 	text-align: left;
 }
 
-.news-p {
-	font-family: 'Roboto';
+.blog-articles {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 1140px;
+}
+
+.blog-articles a {
+	text-decoration: none;
+	display: flex;
+}
+
+.blog-article-small {
+	display: flex;
+	flex-direction: column;
+	border-width: 1px;
+	border-color:  #e3e3e3;
+	border-style: solid;
+	background-color:  #ffffff;
+	width: 360px;
+	height: 570px;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+.blog-article-small a {
+	flex-direction: column;
+}
+
+.blog-article-small p {
+	text-align: center;
+}
+
+.blog-article-small:hover .blog-h3 {
+	color:  #88b04b;
+	text-decoration: underline;
+}
+
+#blog-middle-article {
+	margin: 0 30px 0 30px;
+}
+
+.blog-h3 {
+	font-family: 'Kalyna';
 	color:  #333333;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 32px;
+	text-align: center;
+	margin: 46px 0 39px 0;
+}
+
+
+/*КРОМЛЕХ END*/
+
+
+/*МЕНЕ ЦІКАВЛЯТЬ ПОРОГИ*/
+#contact-mail {
+  height: 416px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../images/contact-mail-background.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  position: relative;
+}
+
+.caption-logo-white2 {
+	margin: 58px 0 39px 0;
+	display: flex;
+	width: 100%;
+	height: 66px;
+	justify-content: center;
+}
+
+.logo-with-text-white2{
+  position: relative;
+  width: 278px;
+  height: 66px;
+}
+
+.text-with-logo-white2 {
+	position: absolute;
+	font-family: 'Kalyna';
+	font-size: 42px;
+	font-weight: 400;
+	top: 76px;
+	color: #ffffff;
+}
+
+#contact-p {
+	font-family: Roboto;
+	color:  #ffffff;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 26px;
+	text-align: center;
+	margin: 48px 0 34px 0;
+}
+
+form {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#email {
+	border-radius: 5px;
+	background-color:  rgba(250, 255, 253, 0.5);
+	width: 360px;
+	height: 38px;
+	border: none;
+}
+
+input {
+	padding-left: 16px;
+	box-sizing: border-box;
+}
+
+input::placeholder {
+	font-family: 'Roboto';
+	color:  #666666;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 100px;
 	text-align: left;
 }
 
-.back-btn {
-	width: 99px;
-	height: 38px;
+input:focus{
+  outline: none;
+}
+
+#subscribe-btn {
+	margin-left: 30px;
 	outline: none;
-	border-bottom-left-radius: 5px;
-	border-top-left-radius: 5px;
-	border-width: 1px;
-	border-color:  #e3e3e3;
-	border-style: solid;
-	background-color:  #ffffff;
-	box-shadow: 1px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24);
-	padding: 0;
-	cursor: pointer;
 }
-
-.forward-btn {
-	width: 99px;
-	height: 38px;
-	outline: none;
-	border-bottom-right-radius: 5px;
-	border-top-right-radius: 5px;
-	border-width: 1px;
-	border-color:  #e3e3e3;
-	border-style: solid;
-	background-color:  #ffffff;
-	box-shadow: 1px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24);
-	padding: 0;
-	cursor: pointer;
-}
-
-.btn-n {
-	border-width: 1px;
-	border-color:  #e3e3e3;
-	border-style: solid;
-	background-color:  #ffffff;
-	width: 38px;
-	height: 38px;
-	outline: none;
-	box-shadow: 1px 3px 4.7px 0.3px rgba(0, 0, 0, 0.24);
-	padding: 0;
-	cursor: pointer;
-}
-
-.nav-btn-text {
-	font-family: 'Roboto';
-	color:  #666666;
-	font-size: 17px;
-	font-weight: 300;
-	padding: 0;
-}
-
-.buttons-nav {
-	display: flex;
-	margin-top: 96px;
-}
-
-.buttons-nav button.active {
-	background-color:  #88b04b;
-	color:  #ffffff;
-	box-shadow: none;
-}
-
-.buttons-nav button.active .nav-btn-text{
-	color:  #ffffff;
-}
-
-.buttons-nav button:hover {
-	background-color:  #88b04b;
-	box-shadow: none;
-}
-
-.buttons-nav button:hover .nav-btn-text{
-	color:  #ffffff;
-}
-
-/*НОВИНИ END*/
+/*МЕНЕ ЦІКАВЛЯТЬ ПОРОГИ END*/
 
 
 /*FOOTER*/
@@ -524,7 +691,6 @@ footer a {
 
 .bold {
 	font-weight: 500;
-	color: #fafffd;
 }
 
 .coordinators {

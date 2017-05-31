@@ -253,7 +253,7 @@ ul.breadcrumb li+li:before {
   content: "/\00a0";
 }
 ul.breadcrumb li a {
-  text-decoration: none;
+  text-decoration: underline;
 	color: #333333;
 }
 ul.breadcrumb li a:visited {
@@ -261,7 +261,6 @@ ul.breadcrumb li a:visited {
 }
 ul.breadcrumb li a:hover {
   color: #88b04b;
-  text-decoration: underline;
 }
 /*BREADCRUMBS-END*/
 
