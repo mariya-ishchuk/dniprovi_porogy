@@ -25,7 +25,9 @@ function addExtToPath(path, ext) {
 var options = {
   isProd: $.yargs.argv && $.yargs.argv._ && $.yargs.argv._[0] == "prod",
   addExtToPath: addExtToPath,
-  watchSequence: [["html", "js", "css"], "inject", "reload"]
+  callWatchSequence: function(cb) {
+    return $.sequence(["html", "js", "css"], "inject", "reload")(cb);
+  }
 };
 
 gulp.task('bowerfiles', getTask('vendor-scripts', options));
@@ -40,6 +42,10 @@ gulp.task("assets", getTask("assets", options));
 
 gulp.task("dev-server", getTask("dev-server", options));
 
+gulp.task("reload", function () {
+  return gulp.src("./dist/index.html")
+    .pipe($.connect.reload());
+});
 
 gulp.task("clean", function () {
   return $.del([

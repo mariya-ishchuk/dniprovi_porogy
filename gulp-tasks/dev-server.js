@@ -33,14 +33,8 @@ module.exports = function (gulp, plugins, options) {
     var app = gulp.src("./dist/index.html")
       .pipe(plugins.open(openOptions));
 
-    gulp.task("reload", function () {
-      return gulp.src("./dist/index.html")
-        .pipe(plugins.connect.reload());
-    });
-
     gulp.task("onWatchChange", function(cb) {
-      console.log(options.watchSequence);
-      plugins.sequence.apply(this, options.watchSequence)(cb);
+      options.callWatchSequence(cb);
     });
 
     return app;

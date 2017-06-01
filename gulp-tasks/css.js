@@ -8,7 +8,12 @@ module.exports = function (gulp, plugins, options) {
     ];
 
     var lessStream = gulp.src(options.addExtToPath(src, "less"))
-      .pipe(plugins.less().on("error", function(err) {console.log(err)}));
+      .pipe(plugins.less()
+        .on("error", function(err) {
+          console.log(err.toString());
+          this.emit('end');
+        })
+      );
 
     return plugins.mergeStream(lessStream, gulp.src(options.addExtToPath(src, "css")))
       .pipe(plugins.autoprefixer("last 2 version", "safari 5", "ie 8", "ie 9"))
