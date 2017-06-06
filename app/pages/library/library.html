@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Бібліотека</title>
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body class="page-library">
+		<!-- HEADER -->
+		<header>
+			<!-- inject:header:html -->
+			<!-- endinject -->
+		</header>
+		<!-- /HEADER -->
+
+		<!-- БІБЛІОТЕКА -->
+		<section id="library">
+			<div class="library-breadcrumbs">
+				<ul class="breadcrumb">
+					<li><a href="index.html">Головна</a></li>
+					<li>Бібліотека</li>
+				</ul>
+			</div>
+			<div class="caption-logo2">
+				<img class="logo-with-text2" src="images/nature-history-logo.png">
+				<h1 class="text-with-logo2">Бібліотека</h1>
+			</div>
+			<div class="library-wrapper">
+				<div class="sidebar">
+					<hr>
+					<button class="accordion active" data-filter="books">Книги <i class="arrow fa fa-caret-right"></i></button>
+					<div class="panel">
+					</div>
+					<hr>
+					<button class="accordion" data-filter="maps">Мапи <i class="arrow fa fa-caret-right"></i></button>
+					<div class="panel">
+					</div>
+					<hr>
+					<button class="accordion" data-filter="articles">Статті <i class="arrow fa fa-caret-right"></i></button>
+					<div class="panel">
+					</div>
+					<hr>
+					<button class="accordion" data-filter="for-kids">Дітям <i class="arrow fa fa-caret-right"></i></button>
+					<hr>
+				</div>
+				<div class="articles"></div>
+			</div>
+			<div class="pagination">
+				<button class="back-btn" type="submit"><a href="#"><span class="nav-btn-text">Назад</span></a></button>
+				<button class="btn-n active" type="submit"><a href="#"><span class="nav-btn-text">1</span></a></button>
+				<button class="btn-n" type="submit"><a href="#"><span class="nav-btn-text">2</span></a></button>
+				<button class="btn-n" type="submit"><a href="#"><span class="nav-btn-text">3</span></a></button>
+				<button class="btn-n" type="submit"><a href="#"><span class="nav-btn-text">4</span></a></button>
+				<button class="btn-n" type="submit"><a href="#"><span class="nav-btn-text">5</span></a></button>
+				<button class="forward-btn" type="submit"><a href="#"><span class="nav-btn-text">Вперед</span></a></button>		
+			</div>
+		</section>
+		<!-- /БІБЛІОТЕКА -->
+
+		<!-- МЕНЕ ЦІКАВЛЯТЬ ПОРОГИ -->
+		 <section id="contact-mail">
+			 <div class="caption-logo-white2">
+				<img class="logo-with-text-white2" src="images/contact-mail-logo.png" alt="">
+				<h1 class="text-with-logo-white2">Мене цікавлять пороги</h1>
+			 </div>
+			<p id="contact-p">Я хочу бути в курсі всього, над чим ви працюєте і не хочу пропустити нагоди допомогти, тому<br>надсилайте мені новини , інормацію про проекти та інші корисності на пошту!</p>
+			<form>
+				<div id="email">
+					<input name="_replyto" type="email" id="email" placeholder="вкажіть email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'вкажіть email'" required>	
+				</div>
+				<button class="green-btn" id="subscribe-btn" type="submit" value="Підписатися">Підписатися</button>
+			</form>
+		 </section>
+		<!-- /МЕНЕ ЦІКАВЛЯТЬ ПОРОГИ -->
+
+		<!-- FOOTER -->
+		<footer>
+			<!-- inject:footer:html -->
+			<!-- endinject -->
+		</footer>
+		<!-- /FOOTER -->
+
+		<script src="js/lib/vendor.min.js"></script>
+		<script src="js/library.js"></script>
+	</body>
+</html>
