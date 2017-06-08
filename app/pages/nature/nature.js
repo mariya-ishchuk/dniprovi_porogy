@@ -1,39 +1,39 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
 	var articles = [
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/geology.png", title: "Геологічна Історія", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/tectonic.jpg", title: "Тектоніка", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/minerals.jpg", title: "Мінерали", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/stones-on-shore.jpg", title: "Геологічні пам’ятки", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/rapid.jpg", title: "Пороги Дніпра", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "microorganism-history"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "microorganism-history"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "microorganism-history"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/kromleh.png", title: "Кромлех у селі Микільське-на-Дніпрі", group: "microorganism", href:"kromleh.html"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/granitni-skeli.png", title: "Гранітні скелі біля с. Волоське", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/strilcha.png", title: "Стрільча скеля", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/zvonetski.png", title: "Звонецькі скелі", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/strilcha-balka.png", title: "Скелі на лівому березі Дніпра біля Стрільчої балки", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/sarmatsky-yarus.png", title: "Опорний розріз сарматського ярусу біля с. Суха Калина", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "microorganism"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/geology.png", title: "Геологічна Історія", group: "legacy"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/tectonic.jpg", title: "Тектоніка", group: "legacy"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/minerals.jpg", title: "Мінерали", group: "legacy"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/stones-on-shore.jpg", title: "Геологічні пам’ятки", group: "legacy"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/rapid.jpg", title: "Пороги Дніпра", group: "legacy"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "geo-history"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "geo-history"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "tectonic"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "tectonic"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "minerals"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "rapid"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/kromleh.png", title: "Кромлех у селі Микільське-на-Дніпрі", group: "geological", href:"kromleh.html"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/granitni-skeli.png", title: "Гранітні скелі біля с. Волоське", group: "geological"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/strilcha.png", title: "Стрільча скеля", group: "geological"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/zvonetski.png", title: "Звонецькі скелі", group: "geological"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/strilcha-balka.png", title: "Скелі на лівому березі Дніпра біля Стрільчої балки", group: "geological"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/sarmatsky-yarus.png", title: "Опорний розріз сарматського ярусу біля с. Суха Калина", group: "geological"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "geological"},
 
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Запорозьке водосховище", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Затоки", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Ставки", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Річки", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Струмки", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Джерела", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "microorganism"},
-		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "microorganism"},
-		{text: "Флора Дніпрових Порогів (мохи, хвощі, папороті, хвойні та квіткові рослини)", src: "images/plants.jpg", title: "Рослини", group: "microorganism-fauna"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Запорозьке водосховище", group: "basin"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Затоки", group: "basin"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Ставки", group: "basin"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Річки", group: "basin"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Струмки", group: "basin"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Джерела", group: "basin"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "reservoir"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "bay"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "pond"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "river"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "stream"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "source"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "source"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "source"},
+		{text: "Флора Дніпрових Порогів (мохи, хвощі, папороті, хвойні та квіткові рослини)", src: "images/plants.jpg", title: "Рослини", group: "flora-fauna"},
 		{text: "Дивовижний світ фауни Дніпрових Порогів – від молюсків і комах до плазунів, птахів і звірів", src: "images/animals.jpg", title: "Тварини", group: "flora-fauna"},
 		{text: "Таємничий і різноманітний світ грибів Порожистого Дніпра", src: "images/mashrooms.jpg", title: "Гриби", group: "flora-fauna"},
 		{text: "Найекстремальніші до природних умов, але вразливі до антропогенних змін організми", src: "images/lichens.jpg", title: "Лишайники", group: "flora-fauna"},
@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Скельні", group: "habitat"},
 		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Трав'яні (степи і луки)", group: "habitat"},
 		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Чагарники", group: "habitat"},
+		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Ліси", group: "habitat"},
 		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "freshwater"},
 		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "swamp"},
 		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "coastal"},
@@ -136,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	 */
 	function setArticleContent(articles, visibleQuantity, page) {
 		var articlesInPage = articles.filter(function(item, index) {
-			return index <= visibleQuantity*page && index > visibleQuantity*(page-1);
+			return index < visibleQuantity*page && index >= visibleQuantity*(page-1);
 		});
 
 		var arr = articlesInPage.map(function(item, index) {
@@ -154,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		});
 		document.getElementsByClassName("articles")[0].innerHTML = arr.join("");
 		if (articles.length > articlesPerPage) {
+			if (document.getElementsByClassName("pagination")[0].classList.contains("visible")) return;
 			document.getElementsByClassName("pagination")[0].classList.add("visible");
 			activePage = 1;
 			setActivePaginator(activePage);

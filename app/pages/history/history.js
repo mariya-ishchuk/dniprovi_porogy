@@ -78,7 +78,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "valley"},
 		{text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut", src: "images/map-placeholder.png", title: "Заголовок", group: "river-valley"},
 	]
-	var artilesPerPage = 6;
+	var activeFilter = "history-nadpor";
+	var articlesPerPage = 6;
+	var activePage = 1;
 	var sidebar = document.getElementsByClassName("sidebar")[0];
 
 	sidebar.onclick = function(event) {
@@ -87,27 +89,45 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			activeAccordionItem = document.querySelector(".accordion-item.active");
 
 		if(target.classList.contains("accordion") || target.classList.contains("accordion-item")) {
+			target.classList.contains("accordion") && setBreadcrumbs(target.dataset.filter);
+			activeFilter = target.dataset.filter;
 			activeAccordion && activeAccordion != target && target.parentElement.previousElementSibling != activeAccordion
 				&& activeAccordion.classList.remove("active");
 			activeAccordionItem && activeAccordionItem.classList.remove("active");
 			target.classList.toggle("active");
-			target.dataset.filter && filterActiveArticles(target.dataset.filter, articles);
+			target.dataset.filter && filterActiveArticles(activeFilter, articles, activePage);
 		}
 	}
 
   /** filterActiveArticles - 
    */
-	function filterActiveArticles(filter, articles) {
+	function filterActiveArticles(filter, articles, activePage) {
 		var filterArticles = articles.filter(function(item) {
 			return item.group == filter;
 		});
-		setArticleContent(filterArticles, artilesPerPage, 1);
+		setArticleContent(filterArticles, articlesPerPage, activePage);
+	}
+
+	function setActivePaginator(page) {
+		document.querySelector(".pagination-page.active").classList.remove("active");
+		document.querySelector("[data-page='"+page+"']").classList.add("active");
 	}
 
 	function bindPaginationClick() {
-		// document.getElementsByClassName("pagination")[0].onclick = function(event) {
-		// 	event.target.classList.contains("pagination-page") && setArticleContent(articles, artilesPerPage, event.target.dataset.page);
-		// }
+		document.getElementsByClassName("pagination")[0].onclick = function(event) {
+			var filterArticles = articles.filter(function(item) {
+				return item.group == activeFilter;
+			});
+			var paginaionControls = {
+				"prev": (activePage - 1) <= 0 ? 1 : activePage - 1,
+				"next": (activePage + 1) >= Math.ceil(filterArticles.length / articlesPerPage) ? Math.ceil(filterArticles.length / articlesPerPage) : (activePage + 1)
+			};
+			activePage = paginaionControls[event.target.dataset.page] ? paginaionControls[event.target.dataset.page] : parseInt(event.target.dataset.page);
+			if (event.target.classList.contains("pagination-page")) {
+				filterActiveArticles(activeFilter, articles, activePage);
+				setActivePaginator(activePage);
+			}
+		}
 	}
 
 	/**
@@ -117,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	 */
 	function setArticleContent(articles, visibleQuantity, page) {
 		var articlesInPage = articles.filter(function(item, index) {
-			return index+1 < visibleQuantity*page && index+1 > visibleQuantity*(page-1);
+			return index < visibleQuantity*page && index >= visibleQuantity*(page-1);
 		});
 
 		var arr = articlesInPage.map(function(item, index) {
@@ -134,11 +154,21 @@ document.addEventListener("DOMContentLoaded", function(event) {
 						"</div>"].join("")
 		});
 		document.getElementsByClassName("articles")[0].innerHTML = arr.join("");
-		if (arr.length > artilesPerPage) {
+		if (articles.length > articlesPerPage) {
+			if (document.getElementsByClassName("pagination")[0].classList.contains("visible")) return;
 			document.getElementsByClassName("pagination")[0].classList.add("visible");
+			activePage = 1;
+			setActivePaginator(activePage);
 			bindPaginationClick();
+		} else {
+			document.getElementsByClassName("pagination")[0].classList.remove("visible");
 		}
 	}
 
-	filterActiveArticles(document.getElementsByClassName("accordion active")[0].dataset.filter, articles);
+	function setBreadcrumbs(text) {
+		document.getElementsByClassName("dynamic-breadcrumb")[0].innerHTML = document.querySelector("[data-filter='"+text+"']").innerText;
+	}
+
+	filterActiveArticles(activeFilter, articles, activePage);
+	setBreadcrumbs(activeFilter);
 });

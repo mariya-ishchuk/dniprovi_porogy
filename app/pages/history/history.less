@@ -446,8 +446,7 @@
 	}
 
 	.article-img img {
-		height: 100%;
-		width: auto;
+		width: 100%;
 	}
 
 	.article-text {
@@ -474,10 +473,6 @@
 		font-weight: 400;
 		line-height: 26px;
 		text-align: left;
-	}
-
-	.pagination a {
-		text-decoration: none;
 	}
 
 	.back-btn {
@@ -523,7 +518,7 @@
 		cursor: pointer;
 	}
 
-	.nav-btn-text {
+	.pagination-page {
 		font-family: 'Roboto';
 		color:  #666666;
 		font-size: 17px;
@@ -532,8 +527,12 @@
 	}
 
 	.pagination {
-		display: flex;
+		display: none;
 		margin-bottom: 104px;
+	}
+
+	.pagination.visible {
+		display: flex;
 	}
 
 	.pagination button.active {

@@ -360,7 +360,7 @@ body {
 		margin-top: 30px;
 	}
 
-	.fa, .fa-angle-right {
+	.fa-angle-right {
 		display: none;
 	}
 
@@ -417,9 +417,7 @@ body {
 	}
 
 	.article {
-		width: 460px;
-		display: flex;
-		flex-direction: row;
+		width: 457px;
 	}
 
 	.article:nth-child(even) {
@@ -427,15 +425,18 @@ body {
 	}
 
 	.article:nth-child(odd) {
-		margin: 0 40px 103px 0;
+		margin: 0 60px 77px 0;
 	}
 
-	.article a:hover .article-text h4 {
+	.article a:hover .article-text span {
 		color: #88b04b;
+		text-decoration: underline;
 	}
 
 	.article a {
 		text-decoration: none;
+		display: flex;
+		flex-direction: row;
 	}
 
 	.article-img {
@@ -450,23 +451,22 @@ body {
 
 	.article-img img {
 		height: 100%;
-		width: auto;
 	}
 
 	.article-text {
-		width: 260px;
+		width: 238px;
 		display: flex;
 		flex-direction: column;
 	}
 
-	.article-text p:first-child {
+	.article-text h4 {
 		font-family: 'Roboto';
 		color:  #333333;
 		font-size: 16px;
 		font-weight: 700;
 		line-height: 26px;
 		text-align: left;
-		margin-bottom: 25px;
+		margin-bottom: 20px;
 	}
 
 	.article-text p {
@@ -476,21 +476,16 @@ body {
 		font-weight: 400;
 		line-height: 26px;
 		text-align: left;
-		flex:1;
+		flex: 1;
 	}
 
 	.article-text span {
-	font-family: 'Roboto';
-	color:  #88b04b;
-	font-size: 16px;
-	font-weight: 900;
-	line-height: 26px;
-	text-decoration: underline;
-	text-align: left;
-	}
-
-	.pagination a {
-		text-decoration: none;
+		font-family: 'Roboto';
+		color: #666666;
+		font-size: 16px;
+		font-weight: 900;
+		line-height: 26px;
+		text-align: left;
 	}
 
 	.back-btn {
@@ -536,7 +531,7 @@ body {
 		cursor: pointer;
 	}
 
-	.nav-btn-text {
+	.pagination-page {
 		font-family: 'Roboto';
 		color:  #666666;
 		font-size: 17px;
@@ -545,8 +540,12 @@ body {
 	}
 
 	.pagination {
-		display: flex;
+		display: none;
 		margin-bottom: 104px;
+	}
+
+	.pagination.visible {
+		display: flex;
 	}
 
 	.pagination button.active {

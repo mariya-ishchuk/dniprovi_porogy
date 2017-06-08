@@ -19,7 +19,8 @@
 				<ul class="breadcrumb">
 					<li><a href="index.html">Головна</a></li>
 					<li><a href="nature-history.html">Природа та історія</a></li>
-					<li>Історія</li>
+					<li><a href="history.html">Історія</a></li>
+					<li class="dynamic-breadcrumb"></li>
 				</ul>
 			</div>
 			<div class="caption-logo2">
@@ -55,7 +56,7 @@
 						<button class="accordion-item" data-filter="lost-monument">Втрачені <br>пам'ятки</button>
 						<button class="accordion-item" data-filter="temple">Храми та інші <br>культові споруди</button>
 						<button class="accordion-item" data-filter="rural-building">Земські будівлі</button>
-						<button class="accordion-item" data-filter="tower">Вежі та <br>господарські <br>споруди</button>
+						<button class="accordion-item" data-filter="tower">Вежі та господарські <br>споруди</button>
 						<button class="accordion-item" data-filter="menonit">Будівлі менонітів</button>
 						<button class="accordion-item" data-filter="traditional-dwelling">Традиційне <br>житло</button>
 						<button class="accordion-item" data-filter="other-architecture">Інші пам'ятки <br>архітектури</button>
@@ -94,13 +95,13 @@
 				<div class="articles"></div>
 			</div>
 			<div class="pagination">
-				<button class="back-btn" type="submit"><a href="#"><span class="nav-btn-text">Назад</span></a></button>
-				<button class="btn-n active" type="submit"><a href="#"><span class="nav-btn-text">1</span></a></button>
-				<button class="btn-n" type="submit"><a href="#"><span class="nav-btn-text">2</span></a></button>
-				<button class="btn-n" type="submit"><a href="#"><span class="nav-btn-text">3</span></a></button>
-				<button class="btn-n" type="submit"><a href="#"><span class="nav-btn-text">4</span></a></button>
-				<button class="btn-n" type="submit"><a href="#"><span class="nav-btn-text">5</span></a></button>
-				<button class="forward-btn" type="submit"><a href="#"><span class="nav-btn-text">Вперед</span></a></button>		
+				<button data-page="prev" class="pagination-page back-btn" type="submit">Назад</button>
+				<button data-page="1" class="pagination-page btn-n active" type="submit">1</button>
+				<button data-page="2" class="pagination-page btn-n" type="submit">2</button>
+				<button data-page="3" class="pagination-page btn-n" type="submit">3</button>
+				<button data-page="4" class="pagination-page btn-n" type="submit">4</button>
+				<button data-page="5" class="pagination-page btn-n" type="submit">5</button>
+				<button data-page="next" class="pagination-page forward-btn" type="submit">Вперед</button>		
 			</div>
 		</section>
 		<!-- /ПРИРОДА -->
