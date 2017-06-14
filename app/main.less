@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'Kalyna';
   src: url('../fonts/kalyna/kalyna.otf');
@@ -167,11 +168,11 @@ body {
 	video { 
 		top: 50%;
 		left: 0;
-		height: 506px;
+		height: auto;
 	  width: 100%;
 		transition: 1s opacity;
 		background-size: cover;
-	  background-image: url(../images/background-river.jpg);
+	  // background-image: url(../images/background-river.jpg);
 	}
 
 	.carousel-container {
@@ -862,7 +863,7 @@ body {
 
 	/*МАПА ПАРКУ*/
 	#parkmap {
-	  height: 600px;
+	  height: auto;
 	  width: 100%;
 	  display: flex;
 	  flex-direction: column;
@@ -906,7 +907,12 @@ body {
 		position: absolute;
 	  height: 100%;
 	  width: 100%;
+	  // pointer-events: none;
 	}
+
+	// #map iframe.clicked {
+	// pointer-events: auto;
+	// }
 
 	#map-wrap .grey {
 		height: 100%;
