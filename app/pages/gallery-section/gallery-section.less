@@ -630,9 +630,12 @@
 			visibility: visible;
 			pointer-events: auto;
 		}
-
+		&.full-screen {
+			.prev-carousel-button { left: 0; }
+			.next-carousel-button { right: 0; }
+		}
 		.carousel-container {
-			max-width: 600px;
+			width: 600px;
 			position: relative
 		}
 
