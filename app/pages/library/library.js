@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 		var arr = articlesInPage.map(function(item, index) {
 			return ["<div class='article'>",
-							"<a href='"+item.href+"' title=''>",
+							"<a href='"+item.href+"' title='' target='_blank'>",
 								"<div class='article-img'>",
 									"<img src='"+item.src+"' alt='"+item.title+"'>",
 								"</div>",
