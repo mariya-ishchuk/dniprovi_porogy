@@ -3,17 +3,19 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Дніпрові Пороги</title>
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/font-awesome.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 
-	<body>
+	<body class="page-index">
 
 	<!-- HEADER -->
 		<header>
 			<!-- inject:header:html -->
 			<!-- endinject -->
+
+			<video autoplay loop>
+				<source src="video/dp.mp4" type="video/mp4">
+			</video>
 
 			<!-- Carousel -->
 			<div id="carousel" class="carousel-container">
@@ -279,7 +281,9 @@
 				<p id="parkmap-p">Мапа складається з декількох шарів: червоними контурами позначено територію чинного<br>регіонального ландшафтного парку «Придніпровський» в межах Солонянського району (як<br>1-а черга проектованого парку «Дніпрові Пороги»)…</p>
 				<div class="map-container">
 					<div id="map-wrap">
-						<div id="map"></div>
+						<div id="map">
+							<iframe scrolling="no" src="https://www.google.com/maps/d/embed?mid=1G7Qz3fbu4atzU2dSsee9i4C8CW4" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+						</div>
 						<div class="grey"></div>
 						<button id="open-map" type="button"><span class="btn-text">Розгорунти</span></button>
 						<div id="close-map" type="button"><i class="fa fa-window-close fa-2x" aria-hidden="true"></i></div>
@@ -345,6 +349,6 @@
 	<script src="js/lib/vendor.min.js"></script>
 	<script src="js/includeHtml.js"></script>
   <script src="js/main.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnxp9C8eI0rUDapnfu_Qktf9gZmddCwJA&callback=initMap"></script>
-</body>
+<!--   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnxp9C8eI0rUDapnfu_Qktf9gZmddCwJA&callback=initMap"></script>
+ --></body>
 </html>

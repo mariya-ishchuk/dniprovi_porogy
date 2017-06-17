@@ -68,16 +68,21 @@ head.insertBefore = function (newElement, referenceElement) {
     insertBefore.call(head, newElement, referenceElement);
 };
 
+// google.maps.event.addListenerOnce(map, 'idle', function(){
+//     // do something only the first time the map is loaded
+//     initMap
+// });
+
 // MAP
-function initMap() {
-	var kromleh = {lat: 48.197066, lng:35.177004};
-	var map = new google.maps.Map(document.getElementById('map'), {
-		zoom: 12,
-		center: kromleh,
-		disableDefaultUI: true,
-		scrollwheel:  false,
-	});
-};
+// function initMap() {
+// 	var kromleh = {lat: 48.197066, lng:35.177004};
+// 	var map = new google.maps.Map(document.getElementById('map'), {
+// 		zoom: 12,
+// 		center: kromleh,
+// 		disableDefaultUI: true,
+// 		scrollwheel:  false,
+// 	});
+// };
 
 var openMap = document.getElementById('open-map');
 var parkMap = document.getElementById('parkmap');
@@ -91,13 +96,13 @@ var closeMap = document.getElementById('close-map');
 closeMap.style.display = 'none';
 
 openMap.onclick = function resizeMap() {
-		parkMap.style.height = '100vh';
+		parkMap.style.height = '800px';
 		parkMap.style.width = '100%';
-		mapContainer.style.height = '60%';
+		mapContainer.style.height = '50%';
 		mapContainer.style.width = '100%';
 		grey.style.display = 'none';
 		openMap.style.display = 'none';
-		google.maps.event.trigger(map, "resize");
+		// google.maps.event.trigger(map, "resize");
 		closeMap.style.display = 'block';
 };
 
@@ -108,6 +113,6 @@ closeMap.onclick = function resizeMap() {
 		mapContainer.style.width = '100%';
 		grey.style.display = 'block';
 		openMap.style.display = 'block';
-		google.maps.event.trigger(map, "resize");
+		// google.maps.event.trigger(map, "resize");
 		closeMap.style.display = 'none';
 };

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Галерея</title>
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body class="page-gallery">
+		<!-- HEADER -->
+		<header>
+			<!-- inject:header:html -->
+			<!-- endinject -->
+		</header>
+		<!-- /HEADER -->
+
+		<!-- ГАЛЕРЕЯ -->
+		<section id="gallery">
+			<div class="breadcrumbs">
+				<ul class="breadcrumb">
+					<li><a href="index.html">Головна</a></li>
+					<li>Галерея</li>
+				</ul>
+			</div>
+			<div class="caption-logo2">
+				<img class="logo-with-text2" src="images/igroup-logo.png">
+				<h1 class="text-with-logo2">Галерея</h1>
+			</div>
+			<div class="gallery-wrapper">
+				<div class="sidebar">
+					<hr>
+					<button class="accordion active" data-filter="gallery-nadpor">Природа <i class="arrow fa fa-caret-right"></i></button>
+					<hr>
+					<button class="accordion" data-filter="history-culture">Історія та культура <i class="arrow fa fa-caret-right"></i></button>
+					<hr>
+					<button class="accordion" data-filter="events">Події та заходи <i class="arrow fa fa-caret-right"></i></button>
+					<hr>
+					<button class="accordion" data-filter="flooding">Пороги до <br>затоплення <i class="arrow fa fa-caret-right"></i></button>
+					<hr>
+					<button class="accordion" data-filter="video">Відео <i class="arrow fa fa-caret-right"></i></button>
+				</div>
+				<div class="articles">
+					<div class="article">
+						<a href="#">
+							<img class="article-img" src="images/placeholder-gallery.png" alt="">
+							<h5 class="article-text">Дерева-пам’ятки</h5>
+						</a>
+					</div>
+					<div class="article">
+						<a href="gallery-section.html">
+							<img class="article-img" src="images/placeholder-gallery.png" alt="">
+							<h5 class="article-text">Весна на Дніпрових <br>Порогах</h5>
+						</a>
+					</div>
+					<div class="article">
+						<a href="#">
+							<img class="article-img" src="images/placeholder-gallery.png" alt="">
+							<h5 class="article-text">Первоцвіти-2017</h5>
+						</a>
+					</div>
+					<div class="article">
+						<a href="#">
+							<img class="article-img" src="images/placeholder-gallery.png" alt="">
+							<h5 class="article-text">Природа острова Кізлев: <br>минуле та сучасне</h5>
+						</a>
+					</div>
+					<div class="article">
+						<a href="#">
+							<img class="article-img" src="images/placeholder-gallery.png" alt="">
+							<h5 class="article-text">Плазуни Порожистого Дніпра</h5>
+						</a>
+					</div>
+					<div class="article">
+						<a href="#">
+							<img class="article-img" src="images/placeholder-gallery.png" alt="">
+							<h5 class="article-text">Флора Дніпрових Порогів</h5>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="pagination">
+				<button data-page="prev" class="pagination-page back-btn" type="submit">Назад</button>
+				<button data-page="1" class="pagination-page btn-n active" type="submit">1</button>
+				<button data-page="2" class="pagination-page btn-n" type="submit">2</button>
+				<button data-page="3" class="pagination-page btn-n" type="submit">3</button>
+				<button data-page="4" class="pagination-page btn-n" type="submit">4</button>
+				<button data-page="5" class="pagination-page btn-n" type="submit">5</button>
+				<button data-page="next" class="pagination-page forward-btn" type="submit">Вперед</button>		
+			</div>
+		</section>
+		<!-- /ГАЛЕРЕЯ -->
+
+		<!-- МЕНЕ ЦІКАВЛЯТЬ ПОРОГИ -->
+		 <section id="contact-mail">
+			 <div class="caption-logo-white2">
+				<img class="logo-with-text-white2" src="images/contact-mail-logo.png" alt="">
+				<h1 class="text-with-logo-white2">Мене цікавлять пороги</h1>
+			 </div>
+			<p id="contact-p">Я хочу бути в курсі всього, над чим ви працюєте і не хочу пропустити нагоди допомогти, тому<br>надсилайте мені новини , інормацію про проекти та інші корисності на пошту!</p>
+			<form>
+				<div id="email">
+					<input name="_replyto" type="email" id="email" placeholder="вкажіть email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'вкажіть email'" required>	
+				</div>
+				<button class="green-btn" id="subscribe-btn" type="submit" value="Підписатися">Підписатися</button>
+			</form>
+		 </section>
+		<!-- /МЕНЕ ЦІКАВЛЯТЬ ПОРОГИ -->
+
+		<!-- FOOTER -->
+		<footer>
+			<!-- inject:footer:html -->
+			<!-- endinject -->
+		</footer>
+		<!-- /FOOTER -->
+
+		<script src="js/lib/vendor.min.js"></script>
+		<script src="js/gallery.js"></script>
+	</body>
+</html>
