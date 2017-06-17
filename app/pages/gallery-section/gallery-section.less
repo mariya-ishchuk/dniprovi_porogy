@@ -632,7 +632,7 @@
 		}
 
 		.carousel-container {
-			width: 600px;
+			max-width: 600px;
 			position: relative
 		}
 
@@ -645,18 +645,32 @@
 		.prev-carousel-button,
 		.next-carousel-button {
 			z-index: 1;
+			cursor: pointer;
+		}
+
+		.prev-carousel-button img,
+		.next-carousel-button img {
+			height: 40px;
 		}
 
 		.carousel-close {
 			position: absolute;
-			top: 0;
-			right: 0;
+			top: 15px;
+			right: 15px;
+			color:  #88b04b;
+			z-index: 1;
+			cursor: pointer;
+			font-size: 20px;
 		}
 
 		.carousel-fullscreen {
 			position: absolute;
-			bottom: 0;
-			right: 0;
+			bottom: 15px;
+			right: 15px;
+			z-index: 1;
+			color:  #88b04b;
+			cursor: pointer;
+			font-size: 20px;
 		}
 	}
 }
