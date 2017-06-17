@@ -433,6 +433,11 @@ body {
 		text-decoration: underline;
 	}
 
+	.article a:hover .article-text div:before {
+		color: #88b04b;
+	}
+
+
 	.article a {
 		text-decoration: none;
 		display: flex;
@@ -477,6 +482,15 @@ body {
 		line-height: 26px;
 		text-align: left;
 		flex: 1;
+	}
+
+	.article-text div {
+		&:before {
+			font-family: "FontAwesome";
+			content: "\f06e";
+			margin-right: 10px;
+			color: #666666;
+		}
 	}
 
 	.article-text span {
@@ -673,7 +687,7 @@ body {
 		justify-content: center;
 		height: 286px;
 		width: 100%;
-		margin: 60px;
+		margin-top: 50px;
 	}
 
 	#footer-bottom {
@@ -700,7 +714,7 @@ body {
 		margin-bottom: 26px;
 	}
 
-	.footer-li {
+	.footer-li a {
 		font-family: 'Roboto';
 		color:  #fafffd;
 		font-size: 16px;
@@ -708,7 +722,7 @@ body {
 		line-height: 26px;
 	}
 
-	.footer-li:hover {
+	.footer-li a:hover {
 		color: #88b04b;
 		text-decoration: underline;
 	}
@@ -751,24 +765,24 @@ body {
 
 	.coordinators {
 		width: 120px;
-	  display: inline-block;
 	}
 
 	.tel {
 		width: 88px;
-	  display: inline-block;
 	}
 
-	.right1 {
-		margin-left: 117px;
+	.address {
+		width: 70px;
 	}
 
-	.right2 {
-		margin-left: 83px;
+	#contacts div {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 
 	#footer-h3-middle {
 		margin-left: 87px;
 	}
-	/*FOOTER END*/
+/*FOOTER END*/
 }

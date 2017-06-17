@@ -94,7 +94,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 								"<div class='article-text'>",
 									"<h4>"+item.title+"</h4>",
 									"<p>"+item.text+"</p>",
-									"<span>"+item.link+"</span>",
+									"<div>",
+									 	"<span>"+item.link+"</span>",
+									"</div>",
 								"</div>",
 							"</a>",
 						"</div>"].join("")

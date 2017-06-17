@@ -119,8 +119,7 @@ body {
 	}
 
 	.header-navitem {
-		margin: 0 13px 0 13px;
-		font-family: PlayfairDisplay;
+		font-family: 'Roboto';
 		font-size: 20px;
 		font-weight: 900;
 		text-transform: uppercase;
@@ -259,11 +258,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		height: 100%;
-		top: 0;
-		left: 50%;
-		padding-top: 20px;
-		transform: translateX(-50%);
+		top: 144px;
 		width: 1150px;
 		max-width: 100%;
 	}
@@ -423,19 +418,16 @@ body {
 			}
 
 			& > span {
-				width: 100%;
-				display: block;
+				max-width: 100%;
 				 img {
-					min-width: 100%;
+					width: 100%;
 					margin: 0 0 25px 0;
-					float: left;
 					border-radius: 4px;
 				}
 			}
 
 			& > img {
-				width: 545px;
-				align-self: center;
+				max-width: 100%;
 				margin-bottom: 30px;
 			}
 		}
@@ -567,7 +559,7 @@ body {
 		justify-content: center;
 		height: 286px;
 		width: 100%;
-		margin: 60px;
+		margin-top: 50px;
 	}
 
 	#footer-bottom {
@@ -594,7 +586,7 @@ body {
 		margin-bottom: 26px;
 	}
 
-	.footer-li {
+	.footer-li a {
 		font-family: 'Roboto';
 		color:  #fafffd;
 		font-size: 16px;
@@ -602,7 +594,7 @@ body {
 		line-height: 26px;
 	}
 
-	.footer-li:hover {
+	.footer-li a:hover {
 		color: #88b04b;
 		text-decoration: underline;
 	}
@@ -645,20 +637,20 @@ body {
 
 	.coordinators {
 		width: 120px;
-	  display: inline-block;
 	}
 
 	.tel {
 		width: 88px;
-	  display: inline-block;
 	}
 
-	.right1 {
-		margin-left: 117px;
+	.address {
+		width: 70px;
 	}
 
-	.right2 {
-		margin-left: 83px;
+	#contacts div {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 
 	#footer-h3-middle {
