@@ -269,14 +269,14 @@ body {
 		color:  #333333;
 	}
 
-	.igroup-wrapper {
+	section {
 		display: flex;
 		flex-direction: column;
 		width: 950px;
 		align-items: center;
 	}
 
-	.igroup-wrapper p {
+	section p {
 		font-family: 'Roboto';
 		color:  #333333;
 		font-size: 16px;
@@ -286,33 +286,30 @@ body {
 		margin-top: 30px;
 	}
 
-	.igroup-members {
+	section + img {
+		max-width: 100%;
+	}
+
+	article {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: flex-start;
 		margin-top: 87px;
 		width: 980px;
-		height: 1400px;
 	}
 
-	.member {
+	article div {
 		width: 165px;
 		display: flex;
 		flex-direction: column;
-		margin-bottom: 60px;
 		align-items: center;
-		padding: 15px;
-		width: calc(~"100% / 5");
+		margin: 0 15px 60px 15px;
 		position: relative;
 		box-sizing: border-box;
 	}
 
-	.member:nth-child(7) {
-		margin-bottom: 500px;
-	}
-
-	.member h3 {
+	article div h3 {
 		font-family: 'Roboto';
 		color:  #000000;
 		font-size: 16px;
@@ -322,11 +319,11 @@ body {
 		margin: 25px 0 25px 0;
 	}
 
-	.member h3 span {
+	article div h3 span {
 		text-transform: uppercase;
 	}
 
-	.member p {
+	article div p {
 		font-family: 'Roboto';
 		color:  #333333;
 		font-size: 13px;
@@ -336,7 +333,10 @@ body {
 		margin: 0;
 	}
 
-
+	article div a {
+		text-decoration: none;
+		align-self: flex-start;
+	}
 
 	.circle {
 		-webkit-box-align: center;
@@ -361,11 +361,6 @@ body {
 	.facebook-share {
 		border: 1px solid #3b5998;
 		margin-top: 20px;
-	}
-
-	.member a {
-		text-decoration: none;
-		align-self: flex-start;
 	}
 
 	.fa-facebook {
