@@ -290,7 +290,7 @@
 		margin: 0;
 	}
 
-	button.accordion {
+	a.accordion {
 		background-color: #ffffff;;
 		color: #333333;
 		padding: 0;
@@ -305,13 +305,14 @@
 		line-height: 26px;
 		transition: 0.4s;
 		margin: 26px 0;
+		text-decoration: none;
 	}
 
-	button.accordion.active, button.accordion:hover {
+	a.accordion.active, a.accordion:hover {
 		color: #88b04b;
 	}
 
-	button.accordion.active {
+	a.accordion.active {
 		max-height: 500px;
 		transition: max-height 0.5s linear;
 	}
@@ -457,22 +458,22 @@
 		display: flex;
 	}
 
-	.pagination button.active {
+	.pagination a.active {
 		background-color:  #88b04b;
 		color:  #ffffff;
 		box-shadow: none;
 	}
 
-	.pagination button.active .nav-btn-text{
+	.pagination a.active .nav-btn-text{
 		color:  #ffffff;
 	}
 
-	.pagination button:hover {
+	.pagination a:hover {
 		background-color:  #88b04b;
 		box-shadow: none;
 	}
 
-	.pagination button:hover .nav-btn-text{
+	.pagination a:hover .nav-btn-text{
 		color:  #ffffff;
 	}
 	/*ГАЛЕРЕЯ END*/

@@ -292,7 +292,7 @@
 		margin: 0;
 	}
 
-	button.accordion {
+	a.accordion {
 		background-color: #ffffff;;
 		color: #333333;
 		padding: 0;
@@ -307,14 +307,15 @@
 		line-height: 26px;
 		transition: 0.4s;
 		margin: 26px 0;
+		text-decoration: none;
 	}
 
-	button.accordion .arrow {
+	a.accordion .arrow {
 		transform: rotate(0);
 		transition: transform 0.3s linear;
 	}
 
-	button.accordion.active, button.accordion:hover {
+	a.accordion.active, a.accordion:hover {
 		color: #88b04b;
 	}
 
@@ -326,12 +327,12 @@
 		transition: max-height 0.3s linear;
 	}
 
-	button.accordion.active + .panel {
+	a.accordion.active + .panel {
 		max-height: 500px;
 		transition: max-height 0.5s linear;
 	}
 
-	button.accordion.active .arrow {
+	a.accordion.active .arrow {
 		transform: rotate(90deg);
 	}
 
@@ -343,7 +344,7 @@
 		display: none;
 	}
 
-	button.accordion-item {
+	a.accordion-item {
 		position: relative;
 		background-color: #ffffff;;
 		color: #333333;
@@ -361,9 +362,12 @@
 		transition: 0.4s;
 		padding-left: 30px;
 		margin-bottom: 10px;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
 	}
 
-	button.accordion-item:last-child {
+	a.accordion-item:last-child {
 		margin-bottom: 26px;
 	}
 
