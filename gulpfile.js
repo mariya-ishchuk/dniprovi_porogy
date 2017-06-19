@@ -31,6 +31,7 @@ var options = {
 };
 
 gulp.task('bowerfiles', getTask('vendor-scripts', options));
+gulp.task('bowerstyles', getTask('vendor-styles', options));
 gulp.task("js", getTask("scripts", options));
 
 gulp.task("html", getTask("html", options));
@@ -53,10 +54,8 @@ gulp.task("clean", function () {
   ]);
 });
 
-gulp.task("dist", $.sequence("bowerfiles", "js", ["html", "css", "assets"], "inject"));
+gulp.task("dist", $.sequence("bowerfiles", "bowerstyles", "js", ["html", "css", "assets"], "inject"));
 
 gulp.task("default", $.sequence("clean", "dist", "dev-server"));
 
 gulp.task("prod", $.sequence("clean", "dist"));
-
-
