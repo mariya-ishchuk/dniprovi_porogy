@@ -16,9 +16,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		var carouselTimer, carouselInterval;
 
 		$('.jcarousel')
-			.jcarousel({wrap: "circular"})
+			.on('jcarousel:create jcarousel:reload', function() {
+				var element = $(this),
+					width = $("body").innerWidth();
+
+				element.hasClass("full-screen") && element.jcarousel('items').css('width', width + 'px');
+			})
+			.on('jcarousel:visiblein', 'li', function(event, carousel) {
+				$(this).css({opacity: 0.0}).animate({opacity: 1.0}, 1000);
+			})
+			.on('jcarousel:visibleout', 'li', function(event, carousel) {
+				$(this).css({opacity: 1.0}).animate({opacity: 0.0}, 1000);
+			})
+			.jcarousel({
+				wrap: "circular",
+				animation: {
+					duration: 0
+				}
+			})
 			.jcarouselAutoscroll({
-					interval: 3000,
+					interval: 5000,
 					target: '+=1',
 					autostart: true
 			});

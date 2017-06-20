@@ -1,22 +1,22 @@
 
 @font-face {
-  font-family: 'Kalyna';
-  src: url('../fonts/kalyna/kalyna.otf');
+	font-family: 'Kalyna';
+	src: url('../fonts/kalyna/kalyna.otf');
 }
 
 @font-face {
-  font-family: 'robotoblack';
-  src: url('../fonts/Roboto/Roboto-Black-webfont.woff') format('woff');
-  font-family: 'robotobold';
-  src: url('../fonts/Roboto/Roboto-Bold-webfont.woff') format('woff');
-  font-family: 'robotolight';
-  src: url('../fonts/Roboto/Roboto-Light-webfont.woff') format('woff');
-  font-family: 'robotolight_italic';
-  src: url('../fonts/Roboto/Roboto-LightItalic-webfont.woff') format('woff');
+	font-family: 'robotoblack';
+	src: url('../fonts/Roboto/Roboto-Black-webfont.woff') format('woff');
+	font-family: 'robotobold';
+	src: url('../fonts/Roboto/Roboto-Bold-webfont.woff') format('woff');
+	font-family: 'robotolight';
+	src: url('../fonts/Roboto/Roboto-Light-webfont.woff') format('woff');
+	font-family: 'robotolight_italic';
+	src: url('../fonts/Roboto/Roboto-LightItalic-webfont.woff') format('woff');
 	font-family: 'robotomedium';
 	src: url('../fonts/Roboto/Roboto-Medium-webfont.woff') format('woff');
 	font-family: 'robotoregular';
-  src: url('../fonts/Roboto/Roboto-Regular-webfont.woff') format('woff');
+	src: url('../fonts/Roboto/Roboto-Regular-webfont.woff') format('woff');
 }
 
 html {
@@ -34,16 +34,16 @@ body {
 
 	/*HEADER*/
 	header {
-	  // height: 506px;
-	  // width: 100%;
-	  display: flex;
-	  flex-direction: column;
-	  // background-image: url(../images/background-river.jpg);
-	  // background-size: 100% 100%;
-	  // background-position: center;
-	  // background-repeat: no-repeat;
-	  align-items: center;
-	  position: relative;
+		// height: 506px;
+		// width: 100%;
+		display: flex;
+		flex-direction: column;
+		// background-image: url(../images/background-river.jpg);
+		// background-size: 100% 100%;
+		// background-position: center;
+		// background-repeat: no-repeat;
+		align-items: center;
+		position: relative;
 	}
 
 	#header-top {
@@ -169,40 +169,26 @@ body {
 		top: 50%;
 		left: 0;
 		height: auto;
-	  width: 100%;
+		width: 100%;
 		transition: 1s opacity;
 		background-size: cover;
-	  // background-image: url(../images/background-river.jpg);
+		// background-image: url(../images/background-river.jpg);
 	}
 
 	.carousel-container {
-	    -webkit-box-align: center;
-	        -ms-flex-align: center;
-	            align-items: center;
-	    -ms-flex-item-align: center;
-	        align-self: center;
-	    display: -webkit-box;
-	    display: -ms-flexbox;
-	    display: flex;
-	    -webkit-box-pack: justify;
-	        -ms-flex-pack: justify;
-	            justify-content: space-between;
-	    width: 100%;
+		align-items: center;
+		align-self: center;
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
 	}
 
 	.carousel-container-articles {
-	    -webkit-box-align: center;
-	        -ms-flex-align: center;
-	            align-items: center;
-	    -ms-flex-item-align: center;
-	        align-self: center;
-	    display: -webkit-box;
-	    display: -ms-flexbox;
-	    display: flex;
-	    -webkit-box-pack: center;
-	        -ms-flex-pack: center;
-	            justify-content: center;
-	    width: 100%;
+		align-items: center;
+		align-self: center;
+		display: flex;
+		justify-content: center;
+		width: 100%;
 	}
 
 	/*
@@ -212,13 +198,13 @@ body {
 	Position must be relative!
 	*/
 	.jcarousel, .jcarousel-articles {
-	    overflow: hidden;
-	    position: relative;
-	    width: 600px;
+			overflow: hidden;
+			position: relative;
+			width: 600px;
 	}
 
 	.jcarousel-articles {
-	    width: 1150px;
+			width: 1150px;
 	}
 
 	/*
@@ -227,12 +213,12 @@ body {
 	that the width is big enough to contain all items.
 	*/
 	.jcarousel ul, .jcarousel-articles ul {
-	    /* Optional, required in this case since it's a  element */
-	    list-style: none;
-	    margin: 0;
-	    padding: 0;
-	    position: relative;
-	    width: 20000em;
+			/* Optional, required in this case since it's a  element */
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			position: relative;
+			width: 20000em;
 	}
 
 	/*
@@ -240,29 +226,29 @@ body {
 	have a fixed width and height (but it's not required).
 	*/
 	.jcarousel li, .jcarousel-articles li {
-	    float: left;
-	    /* Required only for block elements like 's */
-	    width: 600px;
+			float: left;
+			/* Required only for block elements like 's */
+			width: 600px;
 	}
 
 	.jcarousel-articles li {
-	    width: 393px;
+			width: 393px;
 	}
 
 	.carousel-text {
-	    height: auto;
-	    width: 100%;
+			height: auto;
+			width: 100%;
 	}
 
 	.prev-carousel-button, .next-carousel-button {
-	    cursor: pointer;
-	    left: -25px;
-	    position: absolute;
+			cursor: pointer;
+			left: -25px;
+			position: absolute;
 	}
 
 	.next-carousel-button {
-	    right: -25px;
-	    left: auto;
+			right: -25px;
+			left: auto;
 	}
 
 	#carousel {
@@ -287,6 +273,18 @@ body {
 		justify-content: center;
 	}
 
+	.carousel-video {
+		width: 100%;
+	}
+
+	.carousel-items-wrapper {
+		position: relative;
+		.carousel-image {
+			width: 100%;
+			height: auto;
+		}
+	}
+
 	.header-h2 {
 		font-family: Kalyna;
 		color:  #ffffff;
@@ -304,39 +302,39 @@ body {
 
 	/*SEARCH-BOX*/
 	.box {
-	  width: 200px;
-	  height: 39px;
+		width: 200px;
+		height: 39px;
 	}
 
 	.container-2 {
-	  width: 100%;
-	  vertical-align: middle;
-	  white-space: nowrap;
-	  position: relative;
+		width: 100%;
+		vertical-align: middle;
+		white-space: nowrap;
+		position: relative;
 	}
 
 	.container-2 input#search {
-	  width: 45px;
-	  height: 39px;
-	  background-color:  rgba(52, 46, 55, 0.4);
-	  border: none;
-	  float: left;
-	  padding-left: 35px;
-	  -webkit-border-radius: 5px;
-	  -moz-border-radius: 5px;
-	  border-radius: 5px;
-	  font-family: 'Roboto';
+		width: 45px;
+		height: 39px;
+		background-color:  rgba(52, 46, 55, 0.4);
+		border: none;
+		float: left;
+		padding-left: 35px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		font-family: 'Roboto';
 		color: #fafffd;
 		font-size: 16px;
 		font-weight: 300;
 		line-height: 42px;
 		text-align: left;
 	 
-	  -webkit-transition: width .55s ease;
-	  -moz-transition: width .55s ease;
-	  -ms-transition: width .55s ease;
-	  -o-transition: width .55s ease;
-	  transition: width .55s ease;
+		-webkit-transition: width .55s ease;
+		-moz-transition: width .55s ease;
+		-ms-transition: width .55s ease;
+		-o-transition: width .55s ease;
+		transition: width .55s ease;
 	}
 
 	.container-2 input#search::-webkit-input-placeholder {
@@ -344,16 +342,16 @@ body {
 	}
 
 	.container-2 .icon {
-	  position: absolute;
-	  margin-left: 14px;
-	  margin-top: 12px;
-	  z-index: 1;
+		position: absolute;
+		margin-left: 14px;
+		margin-top: 12px;
+		z-index: 1;
 		color: #fafffd;
 	}
 
 	.container-2 input#search:focus, .container-2 input#search:active {
-	  outline: none;
-	  width: 100%;
+		outline: none;
+		width: 100%;
 		padding-right: 12px;
 	}
 	 
@@ -366,12 +364,12 @@ body {
 
 	/*НАША ДІЯЛЬНІСТЬ*/
 	#what-we-do {
-	  height: 814px;
-	  width: 100%;
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
-	  position: relative;
+		height: 814px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
 	}
 
 	.caption-logo1 {
@@ -383,9 +381,9 @@ body {
 	}
 
 	.logo-with-text1{
-	  position: relative;
-	  width: 257px;
-	  height: 130px;
+		position: relative;
+		width: 257px;
+		height: 130px;
 	}
 
 	.text-with-logo1 {
@@ -406,9 +404,9 @@ body {
 	}
 
 	.logo-with-text2{
-	  position: relative;
-	  width: 278px;
-	  height: 66px;
+		position: relative;
+		width: 278px;
+		height: 66px;
 	}
 
 	.text-with-logo2 {
@@ -442,11 +440,11 @@ body {
 	}
 
 	.what-we-do-article:first-child {
-	  margin-left: 0;
+		margin-left: 0;
 	}
 
 	.what-we-do-article:last-child {
-	  margin-right: 0;
+		margin-right: 0;
 	}
 
 	.what-we-do-article:hover {
@@ -487,16 +485,16 @@ body {
 
 	/*НОВИНИ*/
 	#news {
-	  height: 656px;
-	  width: 100%;
-	  display: flex;
-	  flex-direction: column;
-	  background-image: url(../images/news-background.png);
-	  background-size: 100% 100%;
-	  background-position: center;
-	  background-repeat: no-repeat;
-	  align-items: center;
-	  position: relative;
+		height: 656px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		background-image: url(../images/news-background.png);
+		background-size: 100% 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		align-items: center;
+		position: relative;
 	}
 
 	#news a {
@@ -570,12 +568,12 @@ body {
 
 	/*БЛОГ*/
 	#blog {
-	  height: 1350px;
-	  width: 100%;
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
-	  position: relative;
+		height: 1350px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
 	}
 
 	.blog-articles {
@@ -677,16 +675,16 @@ body {
 
 	/*МЕНЕ ЦІКАВЛЯТЬ ПОРОГИ*/
 	#contact-mail {
-	  height: 416px;
-	  width: 100%;
-	  display: flex;
-	  flex-direction: column;
-	  background-image: url(../images/contact-mail-background.png);
-	  background-size: 100% 100%;
-	  background-position: center;
-	  background-repeat: no-repeat;
-	  align-items: center;
-	  position: relative;
+		height: 416px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		background-image: url(../images/contact-mail-background.png);
+		background-size: 100% 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		align-items: center;
+		position: relative;
 	}
 
 	.caption-logo-white2 {
@@ -698,9 +696,9 @@ body {
 	}
 
 	.logo-with-text-white2{
-	  position: relative;
-	  width: 278px;
-	  height: 66px;
+		position: relative;
+		width: 278px;
+		height: 66px;
 	}
 
 	.text-with-logo-white2 {
@@ -760,11 +758,11 @@ body {
 
 	/*ПРИРОДА ТА ІСТОРІЯ*/
 	#nature-history {
-	  width: 100%;
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
-	  position: relative;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
 	}
 
 	hr {
@@ -778,30 +776,30 @@ body {
 	}
 
 	#nature-history .grid-container {
-	  width: 82.8%;
-	  max-width: 1140px;
+		width: 82.8%;
+		max-width: 1140px;
 	}
 
 	#nature-history .grid {
 		margin: 0 auto;
-	  width: 100%;
+		width: 100%;
 	}
 
 	/* clearfix */
 	#nature-history .grid:after {
-	  clear: both;
-	  content: '';
-	  display: block;
+		clear: both;
+		content: '';
+		display: block;
 	}
 
 	/* ---- grid-item ---- */
 
 	#nature-history .grid-item {
-	  float: left;
-	  height: 235px;
+		float: left;
+		height: 235px;
 		margin-bottom: 30px;
-	  width: 263px;
-	 	position: relative;
+		width: 263px;
+		position: relative;
 	}
 
 	.grid-item .text-hover {
@@ -863,12 +861,12 @@ body {
 
 	/*МАПА ПАРКУ*/
 	#parkmap {
-	  height: auto;
-	  width: 100%;
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
-	  position: relative;
+		height: auto;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
 	}
 
 	.caption-logo3 {
@@ -890,24 +888,24 @@ body {
 	}
 
 	.map-container {
-	  height: 234px;
-	  width: 100%;
-	  position: relative;
+		height: 234px;
+		width: 100%;
+		position: relative;
 	}
 
 	#map-wrap {
-	  height: 100%;
-	  width: 100%;
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	#map {
 		position: absolute;
-	  height: 100%;
-	  width: 100%;
-	  // pointer-events: none;
+		height: 100%;
+		width: 100%;
+		// pointer-events: none;
 	}
 
 	// #map iframe.clicked {
@@ -916,10 +914,10 @@ body {
 
 	#map-wrap .grey {
 		height: 100%;
-	  width: 100%;
-	  background-color: #333333;
-	  opacity: 0.75;
-	  position: absolute;
+		width: 100%;
+		background-color: #333333;
+		opacity: 0.75;
+		position: absolute;
 	}
 
 	#open-map {
@@ -961,12 +959,12 @@ body {
 
 	/*ПІДТРИМКА "ДНІПРОВИХ ПОРОГІВ*/
 	#support-dp {
-	  height: 496px;
-	  width: 100%;
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
-	  position: relative;
+		height: 496px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
 	}
 
 	#sponsors {
@@ -978,9 +976,9 @@ body {
 	#sponsors a {
 		text-decoration: none;
 		display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
 	}
 
 	.sponsor-text, .sponsor {
@@ -1014,10 +1012,10 @@ body {
 	}
 
 	.sponsor-img {
-	  min-height: 158px;
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
+		min-height: 158px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.sponsor:hover p {
@@ -1033,13 +1031,13 @@ body {
 
 	/*FOOTER*/
 	footer {
-	  height: 338px;
-	  width: 100%;
-	  display: flex;
-	  flex-direction: column;
-	  background-color: #342e37;
-	  align-items: center;
-	  position: relative;
+		height: 338px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		background-color: #342e37;
+		align-items: center;
+		position: relative;
 	}
 
 	#footer-top {
@@ -1124,12 +1122,12 @@ body {
 
 	.coordinators {
 		width: 120px;
-	  display: inline-block;
+		display: inline-block;
 	}
 
 	.tel {
 		width: 88px;
-	  display: inline-block;
+		display: inline-block;
 	}
 
 	.right1 {
