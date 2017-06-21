@@ -23,9 +23,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				element.hasClass("full-screen") && element.jcarousel('items').css('width', width + 'px');
 			})
 			.on('jcarousel:visiblein', 'li', function(event, carousel) {
+				$(this).find("video").length && $(this).find("video")[0].play();
 				$(this).css({opacity: 0.0}).animate({opacity: 1.0}, 1000);
 			})
 			.on('jcarousel:visibleout', 'li', function(event, carousel) {
+				$(this).find("video").length && $(this).find("video")[0].pause();
 				$(this).css({opacity: 1.0}).animate({opacity: 0.0}, 1000);
 			})
 			.jcarousel({
