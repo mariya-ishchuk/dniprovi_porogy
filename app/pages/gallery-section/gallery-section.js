@@ -1,3 +1,5 @@
+
+
 // document.addEventListener("DOMContentLoaded", function(event) {
 
 // 	initGalery(".gallery-section-wrapper", ".gallery-item");
