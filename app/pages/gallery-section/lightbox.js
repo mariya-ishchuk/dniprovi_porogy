@@ -1,8 +1,6 @@
-$(document).ready(function() {
-	$('.gallery-item').magnificPopup({
-		type: 'image',
-		gallery: {
-			enabled: true
-		}
-	});
+$('page-gallery-section').length && $('page-gallery-section .gallery-item').magnificPopup({
+	type: 'image',
+	gallery: {
+		enabled: true
+	}
 });

@@ -1,6 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
-	var articles = [
-	]
+function whatIsDPInit() {
 	var activeFilter = "nature";
 	var sidebar = document.getElementsByClassName("sidebar")[0];
 
@@ -24,4 +22,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		document.getElementsByClassName("dynamic-breadcrumb")[0].innerHTML = document.querySelector("[data-filter='"+text+"']").innerText;
 	};
 	setBreadcrumbs(activeFilter);
-});
+};
+
+document.getElementsByClassName("page-what-is-dp")[0] && document.getElementsByClassName("sidebar")[0] && whatIsDPInit();

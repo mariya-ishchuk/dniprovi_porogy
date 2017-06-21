@@ -6,8 +6,9 @@ module.exports = function (gulp, plugins, options) {
         "./app/assets/js/*.js",
         "./app/pages/**/*.js",
         "./app/shared/**/*.js"]),
-      plugins.rename({dirname: ""}),
+      // plugins.rename({dirname: ""}),
       // plugins.if(options.isProd, plugins.uglify()),
+      plugins.concat("main.js"),
       gulp.dest("dist/js")
     ],
     cb);

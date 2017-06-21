@@ -1,4 +1,4 @@
-function initMap() {
+function initKromlehMap() {
 	var mykilske = {lat: 48.204151, lng:35.173128};
 	var map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 14,
